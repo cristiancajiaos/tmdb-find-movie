@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   baseUrl: 'https://api.themoviedb.org/3',
   apiKey: '8a3528f455ee4842aa5b1913a378de43',
+  language: 'en-US',
 };
 
 /*

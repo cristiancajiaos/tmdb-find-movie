@@ -10,5 +10,18 @@
       </button>
     </div>
   </form>
+
+  <br/>
+
+  <button class="btn btn-danger" (click)="reset()">
+    Reset
+  </button>
+
+  <div *ngIf="result">
+    <hr/>
+
+    <p>{{result}}</p>
+  </div>
 </div>
+
 
