@@ -1,4 +1,14 @@
 <div class="container my-2">
-  <p>layout works!</p>
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <span class="input-group-text">
+        <i class="fa-solid fa-search fa-fw"></i>
+      </span>
+      <input type="search" placeholder="Movie Title" class="form-control" formControlName="input"/>
+      <button type="submit" class="btn btn-secondary">
+        Search
+      </button>
+    </div>
+  </form>
 </div>
 

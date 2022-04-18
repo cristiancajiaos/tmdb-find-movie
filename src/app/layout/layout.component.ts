@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  searchForm: FormGroup;
+
+  constructor(
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit(): void {
+    this.searchForm = this.fb.group({
+      input: new FormControl('')
+    });
+  }
+
+  onSubmit(): void {
+    console.log(this.searchForm.value);
   }
 
 }
